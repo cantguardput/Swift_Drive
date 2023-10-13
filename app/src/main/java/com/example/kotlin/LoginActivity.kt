@@ -7,20 +7,15 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var etUsername: EditText
+    private lateinit var etEmail: EditText
     private lateinit var etPassword: EditText
-    private lateinit var history : TextView
 
     val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
-            val data: Intent? = result.data
-            val returnString:String? = data?.getStringExtra("history")
-            history.text = returnString
         }
     }
 
@@ -28,14 +23,13 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        history = findViewById(R.id.history)
-        etUsername = findViewById(R.id.edt_username)
+        etEmail = findViewById(R.id.edt_email)
         etPassword = findViewById(R.id.edt_password)
 
 
         val bundle = intent.extras
         if (bundle != null){
-            etUsername.setText(bundle.getString("Username"))
+            etEmail.setText(bundle.getString("Email"))
             etPassword.setText(bundle.getString("Password"))
         }
 
@@ -46,8 +40,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when(v.id){
             R.id.btn_login -> {
-                val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                intent.putExtra("User",User(etUsername.text.toString(),etPassword.text.toString()))
+                val intent = Intent(this@LoginActivity, Homepage::class.java)
+                intent.putExtra("User",User(etEmail.text.toString(),etPassword.text.toString()))
                 resultLauncher.launch(intent)
             }
         }

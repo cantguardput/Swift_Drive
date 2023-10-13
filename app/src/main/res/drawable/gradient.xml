@@ -1,0 +1,8 @@
+<!-- Buat drawable gradien dalam res/drawable/gradien.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#102C57"
+        android:endColor="@color/black"
+        android:angle="60" />
+</shape>
+

@@ -1,50 +1,45 @@
 package com.example.kotlin
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.TextView
+import android.widget.EditText
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    private  lateinit var tv :TextView
+
+    private lateinit var etUsername:EditText
+    private lateinit var etPassword:EditText
+    private lateinit var etEmail:EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        tv =findViewById(R.id.textView)
-        val username = intent.getParcelableExtra<User>("User")?.username
-        val password = intent.getParcelableExtra<User>("Password")?.password
-        tv.text = "Username : $username dan Password $password "
+        setContentView(R.layout.activity_register)
 
-        val btnImplicit : Button = findViewById(R.id.btn_implicit)
-        btnImplicit.setOnClickListener(this)
+        etUsername = findViewById(R.id.edt_username)
+        etPassword = findViewById(R.id.edt_password)
+        etEmail = findViewById(R.id.edt_email)
 
-        val btnFragment: Button = findViewById(R.id.btn_fragment)
-        btnFragment.setOnClickListener(this)
+        val btnRegister: Button = findViewById(R.id.btn_register)
+        btnRegister.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
-        when (v.id){
-            R.id.btn_implicit -> {
-               // val message = " Haloo"
-               // val intent = Intent()
-               // intent.action = Intent.ACTION_SEND
-               // intent.putExtra(Intent.EXTRA_TEXT, message)
-              //  intent.type = "text/plain"
-               // startActivity(intent)
+        when(v.id){
+            R.id.btn_register -> {
 
-                val intent = Intent()
-                intent.putExtra("history", "Anda Sudah Login")
-                setResult(RESULT_OK,intent)
-                finish()
-            }
-            R.id.btn_fragment -> {
-                val intent = Intent(this@MainActivity, HomeFragment::class.java)
+                val bundle = Bundle()
+                bundle.putString("Username", etUsername.text.toString())
+                bundle.putString("Password", etPassword.text.toString())
+                //bundle.putString("Comfirm Password", etCofirmPassword.text.toString())
+
+
+                val intent = Intent(this@MainActivity, LoginActivity::class.java)
+                intent.putExtras(bundle)
                 startActivity(intent)
             }
-
         }
+
     }
 }

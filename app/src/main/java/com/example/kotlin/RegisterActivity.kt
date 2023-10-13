@@ -11,7 +11,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var etUsername:EditText
     private lateinit var etPassword:EditText
-    private lateinit var etCofirmPassword:EditText
+    private lateinit var etEmail:EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
         etUsername = findViewById(R.id.edt_username)
         etPassword = findViewById(R.id.edt_password)
-        etCofirmPassword = findViewById(R.id.edt_comfirm_password)
+        etEmail = findViewById(R.id.edt_email)
 
         val btnRegister: Button = findViewById(R.id.btn_register)
         btnRegister.setOnClickListener(this)
