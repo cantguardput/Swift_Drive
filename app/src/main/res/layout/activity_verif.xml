@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verif">
+    <TextView
+        android:id="@+id/txT_verif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verifikasi Kode OTP"
+        android:textColor="@color/Fragment3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="584dp"
+        android:text="Masukkan kode verifikasi yang sdah dikirim ke alamat email anda"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txT_verif"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <EditText
+        android:id="@+id/edt_otp1"
+        android:layout_width="61dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txT_verif" />
+
+    <EditText
+        android:id="@+id/edt_otp2"
+        android:layout_width="61dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txT_verif" />
+
+    <EditText
+        android:id="@+id/edt_otp3"
+        android:layout_width="61dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txT_verif" />
+
+    <EditText
+        android:id="@+id/edt_otp4"
+        android:layout_width="61dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.745"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txT_verif" />
+
+    <EditText
+        android:id="@+id/edt_otp5"
+        android:layout_width="61dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txT_verif" />
+
+    <Button
+        android:id="@+id/btn_sendkode"
+        android:layout_width="360dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="368dp"
+        android:backgroundTint="@color/Fragment3"
+        android:text="KIRIM KODE"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Already"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="228dp"
+        android:text="Tidak menerima kode OTP ?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_sendkode"/>
+
+    <TextView
+        android:id="@+id/L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="228dp"
+        android:text="Kirim Ulang "
+        android:textColor="@color/Fragment3"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_sendkode" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

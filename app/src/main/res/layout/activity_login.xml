@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
+    android:background="@color/white"
     android:layout_gravity="center">
+
 
     <TextView
         android:id="@+id/txT_login"
@@ -22,7 +24,6 @@
         app:layout_constraintVertical_bias="0.075" />
 
 
-
     <TextView
         android:id="@+id/txT_Email"
         android:layout_width="wrap_content"
@@ -31,10 +32,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195"/>
+        app:layout_constraintVertical_bias="0.206" />
 
     <TextView
         android:id="@+id/txT_password"
@@ -44,29 +45,17 @@
         android:text="Kata Sandi"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_email" />
 
-    <TextView
-        android:id="@+id/txT_lupa_ks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Lupa Kata Sandi ?"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.942"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_password" />
-
     <EditText
         android:id="@+id/edt_email"
-        android:hint="  Masukkan Email"
-        android:layout_width="380dp"
-        android:layout_height="58dp"
+        android:layout_width="334dp"
+        android:layout_height="56dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/shape"
+        android:hint="  Masukkan Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,13 +63,13 @@
 
     <EditText
         android:id="@+id/edt_password"
-        android:hint="  Masukkan Password"
-        android:layout_width="380dp"
-        android:layout_height="58dp"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/shape"
+        android:hint="  Masukkan Password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txT_password" />
 
@@ -106,6 +95,20 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_forget"
+        android:layout_width="201dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="356dp"
+        android:backgroundTint="@color/white"
+        android:text="Lupa Kata Sandi ?"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
