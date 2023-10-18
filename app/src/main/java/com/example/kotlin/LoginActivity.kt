@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when(v.id){
             R.id.btn_login -> {
-                val intent = Intent(this@LoginActivity, Homepage::class.java)
+                val intent = Intent(this@LoginActivity, Profile::class.java)
                 intent.putExtra("User",User(etEmail.text.toString()))
                 resultLauncher.launch(intent)
             }
