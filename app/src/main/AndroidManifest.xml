@@ -13,13 +13,16 @@
         android:theme="@style/Theme.Kotlin"
         tools:targetApi="31">
         <activity
+            android:name=".Homepage"
+            android:exported="false" />
+        <activity
+            android:name=".Promo"
+            android:exported="false" />
+        <activity
             android:name=".Pesanan"
             android:exported="false" />
         <activity
             android:name=".Profile"
-            android:exported="false" />
-        <activity
-            android:name=".Homepage"
             android:exported="false" />
         <activity
             android:name=".Verif"

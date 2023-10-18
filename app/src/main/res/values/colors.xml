@@ -5,5 +5,8 @@
     <color name="Fragment1">#4CAF50</color>
     <color name="Fragment2">#AF4C5B</color>
     <color name="Fragment3">#102C57</color>
+    <color name="F">#B8EDFF</color>
+    <color name="primary">#102C57</color>
+
 
 </resources>

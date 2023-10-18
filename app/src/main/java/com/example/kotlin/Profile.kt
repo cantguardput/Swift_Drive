@@ -26,6 +26,9 @@ class Profile : AppCompatActivity(), View.OnClickListener {
 
         val btnPesanan: TextView = findViewById(R.id.pesanan)
         btnPesanan.setOnClickListener(this)
+
+        val btnPromo: TextView = findViewById(R.id.promo)
+        btnPromo.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -36,6 +39,11 @@ class Profile : AppCompatActivity(), View.OnClickListener {
             }
             R.id.pesanan -> {
                 val intent = Intent(this@Profile, Pesanan::class.java)
+                resultLauncher.launch(intent)
+            }
+
+            R.id.promo -> {
+                val intent = Intent(this@Profile, Promo::class.java)
                 resultLauncher.launch(intent)
             }
         }
